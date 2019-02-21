@@ -32,19 +32,25 @@ ga('send', 'pageview');
 			<p>human-computer interaction &middot; social computing &middot; crowdsourcing</p>
 		</div>
 
-		<h4>Projects</h4>
-		{{#each projects}}
-			<div class="project" id="{{id}}">
-				<div class="thumbnail">
-					<a href="/project/{{id}}">
-						<img src="images/{{image}}" alt="Lorem Pixel image" class="img-responsive">
-						<h4>{{title}}</h4>
-					</a>
-					<div class="likeCtr"><button class="btn btn-default likeBtn">Like</button></div>
-					<div class="details"></div>
+		{{#if viewAlt}}
+			<h4>Projects</h4>
+			{{#each projects}}
+				<div class="project" id="{{id}}">
+					<div class="thumbnail">
+						<a href="/project/{{id}}">
+							<img src="images/{{image}}" alt="Lorem Pixel image" class="img-responsive">
+							<h4>{{title}}</h4>
+						</a>
+						<div class="likeCtr"><button id="likeBtn" class="btn btn-default likeBtn">Like</button></div>
+						<div class="details"></div>
+					</div>
 				</div>
-			</div>
-		{{/each}}
+			{{/each}}
+		{{else}}
+			<button id="likeBtn" class="likeBtn">Like</button>
+		{{/if}}
+
+		
 
 
 </body>

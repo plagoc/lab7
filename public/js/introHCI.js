@@ -10,4 +10,7 @@ $(document).ready(function() {
  */
 function initializePage() {
 	// your code here
+	$("#likeBtn").on('click' function() {
+		gtag("send", "event", 'like', 'click');
+	});
 }
